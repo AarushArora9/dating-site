@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LoveLens</title>
+  <style>
+    :root {
+      --primary: #ff4d88;
+      --background: #fdf6f9;
+      --text: #333;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: var(--white);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, #ff99cc, #ff66b2);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .form-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-card h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, select {
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .form-card {
+        width: 60%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .form-card {
+        width: 40%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>LoveLens</h1>
+  </header>
+
+  <section class="hero">
+    <h1>Discover Love Through a New Lens</h1>
+    <p>Join LoveLens and connect with people who truly see you. Your journey to meaningful relationships starts here.</p>
+  </section>
+
+  <section class="container">
+    <div class="form-card">
+      <h2>Create Your Profile</h2>
+      <form action="profile.html" method="get">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="number" name="age" placeholder="Age" required />
+        <select name="preference" required>
+          <option value="">Looking for...</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="any">Any</option>
+        </select>
+        <input type="text" name="interests" placeholder="Your Interests" />
+        <button type="submit">Join Now</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
